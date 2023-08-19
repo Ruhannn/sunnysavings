@@ -18,6 +18,12 @@
       rel="stylesheet"
     />
     <title>SunnySavings</title>
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+      }
+    </style>
   </head>
   <body style="font-family: 'Work Sans', sans-serif">
     <!-- header -->
@@ -55,290 +61,335 @@
     </header>
     <main class="w-100 h-auto bg-[#F8F8F8] lg:px-60 py-32">
       <!-- main section -->
-      <section>
-      <!-- THIS DIV IS THE CONTAINER OF THE PRODUCT -->
-      <div>
-      <div>
-        <h1
-          class="text-black text-2xl md:text-4xl lg:text-left text-center font-semibold mb-8"
-        >
-          Kitchen Ware
-        </h1>
-        <div
-          class="grid lg:grid-cols-3 items-center justify-center gap-10 lg:gap-6"
-        >
-          <div
-            class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
-            id="price-field"
-          >
-            <div
-              class="flex items-center md:h-[250px] mx-auto w-auto h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+      <section class="lg:flex lg:justify-around gap-6">
+        <!-- THIS DIV IS THE CONTAINER OF THE PRODUCT -->
+        <div>
+          <div>
+            <h1
+              class="text-black text-2xl md:text-4xl lg:text-left text-center font-semibold mb-8"
             >
-              <img src="images/prod1.png" class="mx-auto" />
-            </div>
-            <div class="flex flex-col items-center gap-1 mt-4 mb-4">
-              <div class="rating rating-md">
-                <input
-                  type="radio"
-                  name="rating-1"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-1"
-                  class="mask mask-star-2 bg-orange-400"
-                  
-                />
-                <input
-                  type="radio"
-                  name="rating-1"
-                  class="mask mask-star-2 bg-orange-400"
-                  checked
-                />
-                <input
-                  type="radio"
-                  name="rating-1"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-1"
-                  class="mask mask-star-2 bg-orange-400"
-                />
+              Kitchen Ware
+            </h1>
+            <div
+              class="grid lg:grid-cols-3 items-center justify-center gap-10 lg:gap-6"
+            >
+              <div
+                class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
+                id="price-field"
+              >
+                <div
+                  class="flex items-center md:h-[250px] mx-auto w-auto h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+                >
+                  <img src="images/prod1.png" class="mx-auto" />
+                </div>
+                <div class="flex flex-col items-center gap-1 mt-4 mb-4">
+                  <div class="rating rating-md">
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                  </div>
+                  <h1 id="product-name">kitchen wooden utensil</h1>
+                  <h1 id="price">39.00<span>TK</span></h1>
+                </div>
               </div>
-              <h1 id="product-name">kitchen wooden utensil</h1>
-              <h1 id="price">39.00<span>TK</span></h1>
+              <div
+                class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
+                id="price-field"
+              >
+                <div
+                  class="flex items-center mx-auto w-auto md:h-[250px] h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+                >
+                  <img src="images/prod2.png" class="mx-auto" />
+                </div>
+                <div class="flex flex-col items-center gap-1 mt-4 mb-4">
+                  <div class="rating rating-md">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                  </div>
+                  <h1 id="product-name">Cutting Board</h1>
+                  <h1 id="price">25.00<span>TK</span></h1>
+                </div>
+              </div>
+              <div
+                class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
+                id="price-field"
+              >
+                <div
+                  class="flex items-center mx-auto w-auto h-40 md:h-[250px] lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+                >
+                  <img src="images/prod3.png" class="mx-auto" />
+                </div>
+                <div class="flex flex-col items-center gap-1 mt-4 mb-4">
+                  <div class="rating rating-md">
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star-2 bg-orange-400 checked"
+                    />
+                  </div>
+                  <h1 id="product-name">Cooking pot</h1>
+                  <h1 id="price">49.00<span>TK</span></h1>
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
-            id="price-field"
-          >
-            <div
-              class="flex items-center mx-auto w-auto md:h-[250px] h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+          <div class="mt-14">
+            <h1
+              class="text-black text-2xl md:text-4xl lg:text-left text-center font-semibold mb-8"
             >
-              <img src="images/prod2.png" class="mx-auto" />
-            </div>
-            <div class="flex flex-col items-center gap-1 mt-4 mb-4">
-              <div class="rating rating-md">
-                <input
-                  type="radio"
-                  name="rating-2"
-                  class="mask mask-star-2 bg-orange-400"
-                  checked
-                />
-                <input
-                  type="radio"
-                  name="rating-2"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-2"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-2"
-                  class="mask mask-star-2 bg-orange-400"
-                 
-                />
-                <input
-                  type="radio"
-                  name="rating-2"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-              </div>
-              <h1 id="product-name">Cutting Board</h1>
-              <h1 id="price">25.00<span>TK</span></h1>
-            </div>
-          </div>
-          <div
-            class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
-            id="price-field"
-          >
+              Sports Wear
+            </h1>
             <div
-              class="flex items-center mx-auto w-auto h-40 md:h-[250px] lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+              class="grid lg:grid-cols-3 items-center justify-center gap-10 lg:gap-6"
             >
-              <img src="images/prod3.png" class="mx-auto" />
-            </div>
-            <div class="flex flex-col items-center gap-1 mt-4 mb-4">
-              <div class="rating rating-md">
-                <input
-                  type="radio"
-                  name="rating-3"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-3"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-3"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-3"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-3"
-                  class="mask mask-star-2 bg-orange-400 checked"
-                />
+              <div
+                class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
+                id="price-field"
+              >
+                <div
+                  class="flex items-center md:h-[250px] mx-auto w-auto h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+                >
+                  <img src="images/prod4.png" class="mx-auto" />
+                </div>
+                <div class="flex flex-col items-center gap-1 mt-4 mb-4">
+                  <div class="rating rating-md">
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                  </div>
+                  <h1 id="product-name">Sports Back Cap</h1>
+                  <h1 id="price">49.00<span>TK</span></h1>
+                </div>
               </div>
-              <h1 id="product-name">Cooking pot</h1>
-              <h1 id="price">49.00<span>TK</span></h1>
+              <div
+                class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
+                id="price-field"
+              >
+                <div
+                  class="flex items-center mx-auto w-auto md:h-[250px] h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+                >
+                  <img src="images/prod5.png" class="mx-auto" />
+                </div>
+                <div class="flex flex-col items-center gap-1 mt-4 mb-4">
+                  <div class="rating rating-md">
+                    <input
+                      type="radio"
+                      name="rating-5"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-5"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-5"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-5"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-5"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                  </div>
+                  <h1 id="product-name">Full Jersey Set</h1>
+                  <h1 id="price">69.00<span>TK</span></h1>
+                </div>
+              </div>
+              <div
+                class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
+                id="price-field"
+              >
+                <div
+                  class="flex items-center mx-auto w-auto h-40 md:h-[250px] lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+                >
+                  <img src="images/prod6.png" class="mx-auto" />
+                </div>
+                <div class="flex flex-col items-center gap-1 mt-4 mb-4">
+                  <div class="rating rating-md">
+                    <input
+                      type="radio"
+                      name="rating-6"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-6"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-6"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-6"
+                      class="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-6"
+                      class="mask mask-star-2 bg-orange-400 checked"
+                    />
+                  </div>
+                  <h1 id="product-name">Sports cates</h1>
+                  <h1 id="price">159.00<span>TK</span></h1>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="mt-14">
-        <h1
-          class="text-black text-2xl md:text-4xl lg:text-left text-center font-semibold mb-8"
-        >
-        Sports Wear
-        </h1>
-        <div
-          class="grid lg:grid-cols-3 items-center justify-center gap-10 lg:gap-6"
-        >
-          <div
-            class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
-            id="price-field"
-          >
+        <!--? coupon -->
+        <div class="flex items-center justify-center lg:block">
+          <div>
             <div
-              class="flex items-center md:h-[250px] mx-auto w-auto h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+              class="w-[342px] h-36 bg-white rounded-lg p-6 mt-6 lg:mt-[73px]"
             >
-              <img src="images/prod4.png" class="mx-auto" />
-            </div>
-            <div class="flex flex-col items-center gap-1 mt-4 mb-4">
-              <div class="rating rating-md">
+              <h1 class="text-black font-medium text-lg mb-1">Have coupon?</h1>
+              <div class="flex gap-1">
                 <input
-                  type="radio"
-                  name="rating-4"
-                  class="mask mask-star-2 bg-orange-400"
+                  class="w-48 outline-[#E527B2] shadow-md transform transition-all duration-300 h-14 rounded-lg border-white bg-white text-[#1111110D] pl-2"
+                  type="text"
+                  placeholder="Coupon code"
                 />
-                <input
-                  type="radio"
-                  name="rating-4"
-                  class="mask mask-star-2 bg-orange-400"
-                  checked
-                />
-                <input
-                  type="radio"
-                  name="rating-4"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-4"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-4"
-                  class="mask mask-star-2 bg-orange-400"
-                />
+                <button
+                  class="px-6 py-3 bg-[#E527B2] hover:bg-[#ff4ed3] text-white rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                >
+                  Apply
+                </button>
               </div>
-              <h1 id="product-name">Sports Back Cap</h1>
-              <h1 id="price">49.00<span>TK</span></h1>
             </div>
-          </div>
-          <div
-            class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
-            id="price-field"
-          >
             <div
-              class="flex items-center mx-auto w-auto md:h-[250px] h-40 lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
+              class="w-[342px] mt-6 rounded-lg bg-white text-lg font-medium text-black list-none pb-6 pt-6 pl-6"
             >
-              <img src="images/prod5.png" class="mx-auto" />
-            </div>
-            <div class="flex flex-col items-center gap-1 mt-4 mb-4">
-              <div class="rating rating-md">
-                <input
-                  type="radio"
-                  name="rating-5"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-5"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-5"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-5"
-                  class="mask mask-star-2 bg-orange-400"
-                  checked
-                />
-                <input
-                  type="radio"
-                  name="rating-5"
-                  class="mask mask-star-2 bg-orange-400"
-                />
+              <li>1. Home Cooker</li>
+              <li>2. Sports cates</li>
+              <li>3. Home Cooker</li>
+              <hr class="w-72 my-2" />
+              <li>
+                Total price: <span class="text-[#11111186]">00.00</span>
+                <span class="text-[#11111186]">TK</span>
+              </li>
+              <li>
+                Discount: <span class="text-[#11111186]">00.00</span>
+                <span class="text-[#11111186]">TK</span>
+              </li>
+              <li>
+                Total: <span class="text-[#11111186]">00.00</span>
+                <span class="text-[#11111186]">TK</span>
+              </li>
+              <hr class="w-72 my-8" />
+              <div class="flex items-center absolute">
+                <button
+                  class="px-14 w-[294px] py-3 bg-[#E527B2] hover:bg-[#ff4ed3] text-white rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                >
+                  Make Purchase
+                </button>
               </div>
-              <h1 id="product-name">Full Jersey Set</h1>
-              <h1 id="price">69.00<span>TK</span></h1>
-            </div>
-          </div>
-          <div
-            class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
-            id="price-field"
-          >
-            <div
-              class="flex items-center mx-auto w-auto h-40 md:h-[250px] lg:w-[302px] lg:h-[200px] rounded-lg bg-[#1111110D]"
-            >
-              <img src="images/prod6.png" class="mx-auto" />
-            </div>
-            <div class="flex flex-col items-center gap-1 mt-4 mb-4">
-              <div class="rating rating-md">
-                <input
-                  type="radio"
-                  name="rating-6"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-6"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-6"
-                  class="mask mask-star-2 bg-orange-400"
-                  checked
-                />
-                <input
-                  type="radio"
-                  name="rating-6"
-                  class="mask mask-star-2 bg-orange-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-6"
-                  class="mask mask-star-2 bg-orange-400 checked"
-                />
-              </div>
-              <h1 id="product-name">Sports cates</h1>
-              <h1 id="price">159.00<span>TK</span></h1>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-      <!--! coupon -->
-      <div>
-
-      </div>
-    </section>
+      </section>
     </main>
   </body>
+  <script src="index.js"></script>
 </html>
