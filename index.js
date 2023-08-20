@@ -35,7 +35,7 @@ function resetValues() {
   updateApplyBtn();
   updatePurchaseBtn();
 }
-purchaseBtn.addEventListener("click", function() {
+purchaseBtn.addEventListener("click", function () {
   resetValues();
 });
 function updateApplyBtn() {
