@@ -18,10 +18,15 @@
       rel="stylesheet"
     />
     <title>SunnySavings</title>
+    <!-- global styles -->
     <style>
       html,
       body {
         overflow-x: hidden;
+      }
+      button[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
       }
     </style>
   </head>
@@ -56,7 +61,11 @@
         </div>
       </div>
       <div class="flex items-center justify-center">
-        <img class="md:w-[500px]" src="images/Summer 1.png" alt="" />
+        <img
+          class="md:w-[500px] lg:hover:scale-110 transition-all ease-in-out duration-300"
+          src="images/Summer 1.png"
+          alt=""
+        />
       </div>
     </header>
     <main class="w-100 h-auto bg-[#F8F8F8] lg:px-60 py-32">
@@ -68,12 +77,13 @@
             <h1
               class="text-black text-2xl md:text-4xl lg:text-left text-center font-semibold mb-8"
             >
-              Kitchen Ware
+              Kitchenware
             </h1>
             <div
               class="grid lg:grid-cols-3 items-center justify-center gap-10 lg:gap-6"
             >
               <div
+                onclick="btnPressToName(this)"
                 class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
                 id="price-field"
               >
@@ -111,11 +121,12 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <h1 id="product-name">kitchen wooden utensil</h1>
+                  <h1 id="product-name">kitchen wooden utensil Set</h1>
                   <h1 id="price">39.00<span>TK</span></h1>
                 </div>
               </div>
               <div
+                onclick="btnPressToName(this)"
                 class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
                 id="price-field"
               >
@@ -158,6 +169,7 @@
                 </div>
               </div>
               <div
+                onclick="btnPressToName(this)"
                 class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
                 id="price-field"
               >
@@ -204,12 +216,13 @@
             <h1
               class="text-black text-2xl md:text-4xl lg:text-left text-center font-semibold mb-8"
             >
-              Sports Wear
+              Sportswear
             </h1>
             <div
               class="grid lg:grid-cols-3 items-center justify-center gap-10 lg:gap-6"
             >
               <div
+                onclick="btnPressToName(this)"
                 class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
                 id="price-field"
               >
@@ -252,6 +265,7 @@
                 </div>
               </div>
               <div
+                onclick="btnPressToName(this)"
                 class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
                 id="price-field"
               >
@@ -294,6 +308,7 @@
                 </div>
               </div>
               <div
+                onclick="btnPressToName(this)"
                 class="rounded-lg w-72 h-72 md:w-96 md:h-96 lg:w-[342px] lg:h-[350px] p-5 bg-white"
                 id="price-field"
               >
@@ -347,12 +362,15 @@
               <h1 class="text-black font-medium text-lg mb-1">Have coupon?</h1>
               <div class="flex gap-1">
                 <input
-                  class="w-48 outline-[#E527B2] shadow-md transform transition-all duration-300 h-14 rounded-lg border-white bg-white text-[#1111110D] pl-2"
+                  class="w-48 outline-[#E527B2] shadow-md transform transition-all duration-300 h-14 rounded-lg border-white bg-white text-[#111111] pl-2"
                   type="text"
                   placeholder="Coupon code"
+                  id="couponInput"
                 />
                 <button
                   class="px-6 py-3 bg-[#E527B2] hover:bg-[#ff4ed3] text-white rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                  id="applyButton"
+                  disabled
                 >
                   Apply
                 </button>
@@ -361,29 +379,50 @@
             <div
               class="w-[342px] mt-6 rounded-lg bg-white text-lg font-medium text-black list-none pb-6 pt-6 pl-6"
             >
-              <li>1. Home Cooker</li>
-              <li>2. Sports cates</li>
-              <li>3. Home Cooker</li>
+              <ul id="selected-products-list"></ul>
               <hr class="w-72 my-2" />
-              <li>
-                Total price: <span class="text-[#11111186]">00.00</span>
-                <span class="text-[#11111186]">TK</span>
-              </li>
-              <li>
-                Discount: <span class="text-[#11111186]">00.00</span>
-                <span class="text-[#11111186]">TK</span>
-              </li>
-              <li>
-                Total: <span class="text-[#11111186]">00.00</span>
-                <span class="text-[#11111186]">TK</span>
-              </li>
+              <ul id="summary-list">
+                <li>
+                  Total price:
+                  <span id="total-price" class="total-price text-[#11111186]"
+                    >00.00</span
+                  >
+                  <span class="text-[#11111186]">TK</span>
+                </li>
+                <li>
+                  Discount: <span class="discount text-[#11111186]">00.00</span>
+                  <span class="text-[#11111186]">TK</span>
+                </li>
+                <li>
+                  Total: <span class="final-total text-[#11111186]">00.00</span>
+                  <span class="text-[#11111186]">TK</span>
+                </li>
+              </ul>
+
               <hr class="w-72 my-8" />
               <div class="flex items-center absolute">
                 <button
                   class="px-14 w-[294px] py-3 bg-[#E527B2] hover:bg-[#ff4ed3] text-white rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                  id="Purchase-btn"
+                  disabled
+                  onclick="my_modal_4.showModal()"
                 >
-                  Make Purchase
+                  <a href="#my_modal_8">Make Purchase</a>
                 </button>
+                <!-- modal -->
+                <dialog id="my_modal_4" class="modal">
+                  <form method="dialog" class="modal-box py-24 ">
+                    <div class="flex items-center justify-center my-2">
+                  <img src="images/congo.png" alt="">
+                </div>
+                  <h1 class="font-bold text-5xl text-center">Congratulations!</h1>
+                  <p class="my-4 text-[#11111180] font-normal text-center">Your Purchase the product</p>
+                  <div class="modal-action flex items-center justify-center ">
+                    <button class="px-6 py-3 bg-[#E527B2] hover:bg-[#ff4ed3] text-white rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">Go Home</button>
+                  </div>
+                </form>
+                </dialog>
+                <!--!-->
               </div>
             </div>
           </div>
