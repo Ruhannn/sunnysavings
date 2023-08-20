@@ -23,21 +23,6 @@ function btnPressToName(target) {
   updateApplyBtn();
   updatePurchaseBtn();
 }
-function resetValues() {
-  totalPrice = 0;
-  discount = 0;
-  finalTotal = 0;
-  selectedProductNames.length = 0;
-  selectedProductsList.innerHTML = "";
-  totalPriceElement.textContent = totalPrice.toFixed(2);
-  discountElement.textContent = discount.toFixed(2);
-  finalTotalElement.textContent = finalTotal.toFixed(2);
-  updateApplyBtn();
-  updatePurchaseBtn();
-}
-purchaseBtn.addEventListener("click", function () {
-  resetValues();
-});
 function updateApplyBtn() {
   const totalPriceText = totalPriceElement.textContent;
   const totalPrice = parseFloat(totalPriceText);
@@ -63,11 +48,15 @@ function applyDiscount(couponCode) {
     discountElement.textContent = discount.toFixed(2);
     finalTotalElement.textContent = finalTotal.toFixed(2);
   }
+  else{
+    alert("Your Coupon is Wrong")
+  }
 }
 const couponInput = document.getElementById("couponInput");
 applyButton.addEventListener("click", () => {
   const couponCode = couponInput.value.trim();
   applyDiscount(couponCode);
+  couponCode.value = " "
 });
 couponInput.addEventListener("input", () => {
   updateButtonState();

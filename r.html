@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      id="modal"
+    >
+      <div class="modal-content bg-white p-4 rounded shadow-md">
+        <p class="mb-4">
+          Your coupon is wrong. Please enter a valid coupon code.
+        </p>
+        <button
+          id="closeModal"
+          class="px-6 py-3 bg-[#E527B2] hover:bg-[#ff4ed3] text-white rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("modal");
+        const closeModalButton = document.getElementById("closeModal");
+
+        closeModalButton.addEventListener("click", () => {
+          modal.classList.add("hidden");
+        });
+
+        function applyDiscount(couponCode) {
+          if (couponCode === "SELL200") {
+          } else {
+            modal.classList.remove("hidden");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
