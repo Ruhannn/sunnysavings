@@ -49,7 +49,7 @@ function applyDiscount(couponCode) {
     finalTotalElement.textContent = finalTotal.toFixed(2);
   }
   else{
-    alert("Your Coupon is Wrong")
+    alert("Please provide a valid input")
   }
 }
 const couponInput = document.getElementById("couponInput");
