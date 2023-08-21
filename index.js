@@ -47,17 +47,31 @@ function applyDiscount(couponCode) {
     finalTotal = totalPrice - discount;
     discountElement.textContent = discount.toFixed(2);
     finalTotalElement.textContent = finalTotal.toFixed(2);
-  }
-  else{
-    alert("Please provide a valid input")
+  } else {
+    alert("Please provide a valid input");
   }
 }
 const couponInput = document.getElementById("couponInput");
 applyButton.addEventListener("click", () => {
   const couponCode = couponInput.value.trim();
   applyDiscount(couponCode);
-  couponCode.value = " "
+  couponCode.value = " ";
 });
 couponInput.addEventListener("input", () => {
   updateButtonState();
+});
+
+const homeBtn = document.getElementById("home-btn");
+const discountNumber = document.getElementById("discount-price");
+const paymentTotal = document.getElementById("final-price");
+homeBtn.addEventListener("click", function () {
+  sum = 0;
+
+  totalPriceElement.innerText = "00.00";
+  paymentTotal.innerText = "00.00";
+  discountNumber.innerText = "00.00";
+  couponInput.value = " ";
+  selectedProductsList.innerHTML = " ";
+  applyButton.setAttribute("disabled", "true");
+  purchaseBtn.setAttribute("disabled", "true");
 });
